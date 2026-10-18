@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: aircast-ml-api
+    runtime: python
+    plan: starter
+    region: singapore
+    autoDeploy: true
+    buildCommand: pip install -r backend/requirements.txt && python -m backend.ml.download_data && python -m backend.ml.train
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
