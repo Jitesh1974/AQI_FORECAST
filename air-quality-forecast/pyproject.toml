@@ -1,2 +1,16 @@
+[project]
+name = "aircast-ml"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "joblib",
+    "requests",
+]
+
 [tool.vercel]
 entrypoint = "backend.app.main:app"
