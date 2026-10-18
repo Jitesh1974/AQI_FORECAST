@@ -1,0 +1,34 @@
+{
+  "model": "Pipeline(steps=[('imputer',\n                 SimpleImputer(add_indicator=True, strategy='median')),\n                ('regressor',\n                 HistGradientBoostingRegressor(l2_regularization=1.0,\n                                               learning_rate=0.08, max_iter=180,\n                                               random_state=42))])",
+  "feature_columns": [
+    "pm25",
+    "pm10",
+    "so2",
+    "no2",
+    "co",
+    "o3",
+    "temp",
+    "pres",
+    "dewp",
+    "rain",
+    "wspm",
+    "hour",
+    "month",
+    "wind_sin",
+    "wind_cos"
+  ],
+  "metrics": {
+    "mae": 9.7428,
+    "rmse": 18.4801,
+    "r2": 0.9511,
+    "train_rows": 327335,
+    "test_rows": 81845,
+    "cutoff_target_time": "2016-05-12 18:00:00",
+    "total_rows": 409180
+  },
+  "dataset_name": "UCI Beijing Multi-Site Air Quality",
+  "training_region": "Beijing, China (12 monitoring stations, 2013-2017)",
+  "target": "PM2.5 concentration one hour after the input observation (ug/m^3)",
+  "trained_at_utc": "2026-10-18T16:08:55.667741+00:00",
+  "training_rows": 327335
+}
